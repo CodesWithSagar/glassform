@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(img.png);
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: background 5s infinite ease-in-out;
+}
+
+@keyframes background {
+
+  0%,
+  100% {
+    background-position-y: 0.5px;
+  }
+
+  50% {
+    background-position-y: 0px;
+  }
+}
+
+.glass {
+  height: 350px;
+  width: 300px;
+  /*background-color: rgba(25, 125, 225, 0.8);*/
+  background-color: rgba(182, 205, 255, 0.3);
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  Box-shadow: 0.5px 0.5px 2px Black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: glass 5s infinite ease-in-out;
+}
+
+@keyframes glass {
+
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.txt {
+  position: relative;
+  top: -40px;
+  color: rgba(182, 205, 255, 0.3);
+  text-shadow: 0px 0px 3px rgba(182, 205, 255, 0.65);
+  filter: blur(0.3px);
+}
+
+.input {
+  border: none;
+  border-bottom: 2px solid rgba(182, 205, 255, 0.8);
+  background-color: transparent;
+  margin: 0px 0px 20px 0px;
+  filter: blur(0.5px);
+  outline: none;
+  color: white;
+  padding: 0px 0px 2px 5px;
+}
+
+.input::placeholder {
+  color: ghostwhite;
+  /*text-shadow: 0px 0px 2px black; */
+  filter: blur(0px);
+}
+
+.btn {
+  height: 40px;
+  width: 100px;
+  background-color: rgba(182, 205, 255, 0.3);
+  border: none;
+  border-radius: 50px;
+  filter: blur(1px);
+  box-shadow: 0.2px 0.2px 1px black;
+}
+
+.forgtpass {
+  font-size: 8px;
+  position: absolute;
+  margin-top: 35px;
+  margin-right: 115px;
+  color: white;
+  text-shadow: 0px 0px 3px rgba(182, 205, 255, 0.65);
+  filter: blur(0.5px);
+}
+
+@media (min-width: 980px) {
+
+  .glass {
+    height: 350px;
+    width: 500px;
+    /*background-color: rgba(25, 125, 225, 0.8);*/
+    background-color: rgba(182, 205, 255, 0.3);
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0.5px 2px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input {
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid rgba(182, 205, 255, 0.8);
+    background-color: transparent;
+    margin: 0px 0px 20px 0px;
+    filter: blur(0.8px);
+    outline: none;
+    color: white;
+    padding: 0px 0px 2px 5px;
+  }
+
+  .forgtpass {
+    font-size: 5px;
+    position: absolute;
+    margin-top: 35px;
+    margin-right: 220px;
+    color: white;
+    text-shadow: 0px 0px 3px rgba(182, 205, 255, 0.65);
+    filter: blur(0.5px);
+  }
+}
